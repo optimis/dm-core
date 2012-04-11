@@ -63,7 +63,7 @@ share_examples_for 'An Adapter' do
 
   if adapter_supports?(:read)
     describe '#read' do
-      before :all do
+      before do
         @heffalump = Heffalump.create(:color => 'brownish hue')
         #just going to borrow this, so I can check the return values
         @query = Heffalump.all.query
@@ -144,7 +144,7 @@ share_examples_for 'An Adapter' do
 
   if adapter_supports?(:read, :create)
     describe 'query matching' do
-      before :all do
+      before do
         @red  = Heffalump.create(:color => 'red')
         @two  = Heffalump.create(:num_spots => 2)
         @five = Heffalump.create(:num_spots => 5)
